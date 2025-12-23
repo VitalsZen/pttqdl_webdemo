@@ -33,7 +33,7 @@ export const ProjectInfo: React.FC = () => {
             {/* Khung chứa ảnh: w-24 (96px) là kích thước vừa vặn, không quá to/nhỏ */}
             <div className="w-24 h-24 flex-shrink-0 bg-white rounded-lg border border-slate-100 p-1 shadow-sm flex items-center justify-center">
               <img
-                src="/components/img/UIT.logo.jpg" // Lưu ý: sửa dấu \ thành / để chạy đúng trên web
+                src="/img/UIT.logo.jpg" // Lưu ý: sửa dấu \ thành / để chạy đúng trên web
                 alt="Logo UIT"
                 className="w-full h-full object-contain"
               />
