@@ -95,9 +95,6 @@ function App() {
           </ul>
         </nav>
 
-        <div className="p-4 border-t text-xs text-slate-500 text-center bg-slate-50">
-          © 2024 ChurnViz Tool
-        </div>
       </div>
 
       {/* MAIN CONTENT - Không thay đổi logic, giữ nguyên */}

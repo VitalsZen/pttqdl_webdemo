@@ -24,34 +24,45 @@ export const ProjectInfo: React.FC = () => {
   return (
     <div className="w-full h-full overflow-y-auto bg-white px-10 py-8 text-slate-800">
 
-      {/* HEADER */}
-      <header className="mb-10 border-b pb-6 flex flex-col lg:flex-row gap-6 justify-between">
-        <div className="flex gap-4">
-          <div className="w-20 h-20 flex items-center justify-center rounded">
-            <img
-                src='\components\img\UIT.logo.jpg'
-                className="w-20 h-20 object-contain"
-            />
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold uppercase text-blue-900">
-              Phân tích & Dự đoán tỉ lệ Rời bỏ của Khách hàng
-            </h1>
-            <p className="text-sm text-slate-500 mt-1">
-              Demo trực quan hóa dữ liệu
-            </p>
-            <div className="mt-3 text-sm space-y-1">
-              <p><strong>Trường:</strong> ĐH Công nghệ Thông Tin ĐHQG TPHCM)</p>
-              <p><strong>Khoa:</strong> Khoa học và Kỹ ThuậT Thông tin</p>
-              <p><strong>Môn học:</strong> Phân tích và Trực quan dữ liệu</p>
+      <header className="mb-10 border-b border-slate-200 pb-6 flex flex-col lg:flex-row gap-8 justify-between items-start">
+        {/* CỘT TRÁI: Logo + Tên đề tài + Thông tin môn học */}
+        <div className="flex flex-col gap-5">
+          
+          {/* Hàng 1: Logo và Tên đề tài nằm ngang hàng */}
+          <div className="flex items-center gap-5">
+            {/* Khung chứa ảnh: w-24 (96px) là kích thước vừa vặn, không quá to/nhỏ */}
+            <div className="w-24 h-24 flex-shrink-0 bg-white rounded-lg border border-slate-100 p-1 shadow-sm flex items-center justify-center">
+              <img
+                src="/components/img/UIT.logo.jpg" // Lưu ý: sửa dấu \ thành / để chạy đúng trên web
+                alt="Logo UIT"
+                className="w-full h-full object-contain"
+              />
             </div>
+            
+            {/* Tên đề tài */}
+            <div>
+              <h1 className="text-2xl lg:text-3xl font-bold uppercase text-blue-900 leading-tight">
+                Phân tích & Dự đoán <br className="hidden lg:block"/> 
+                tỉ lệ Rời bỏ của Khách hàng
+              </h1>
+              <p className="text-slate-500 font-medium mt-1 text-base">
+                Demo trực quan hóa dữ liệu
+              </p>
+            </div>
+          </div>
+
+          <div className="text-sm space-y-1.5 text-slate-700 max-w-2xl">
+            <p><strong className="font-semibold text-blue-800">Trường:</strong> ĐH Công nghệ Thông Tin - ĐHQG TPHCM</p>
+            <p><strong className="font-semibold text-blue-800">Khoa:</strong> Khoa học và Kỹ Thuật Thông tin</p>
+            <p><strong className="font-semibold text-blue-800">Môn học:</strong> Phân tích và Trực quan dữ liệu</p>
           </div>
         </div>
 
-        <div className="text-sm text-right">
-          <p className="font-semibold text-blue-900">Giảng viên hướng dẫn</p>
-          <p>ThS. Phạm Nguyễn Phúc Toàn</p>
-          <p className="text-slate-500 text-xs">toanpnp@uit.edu.vn</p>
+        {/* CỘT PHẢI: Giảng viên hướng dẫn (Giữ nguyên vị trí) */}
+        <div className="text-sm lg:text-right mt-2 lg:mt-0 p-4 lg:p-0 bg-blue-50 lg:bg-transparent rounded-md lg:rounded-none w-full lg:w-auto">
+          <p className="font-bold text-blue-900 uppercase tracking-wider text-xs mb-1">Giảng viên hướng dẫn</p>
+          <p className="text-base font-medium text-slate-800">ThS. Phạm Nguyễn Phúc Toàn</p>
+          <p className="text-slate-500 text-sm">toanpnp@uit.edu.vn</p>
         </div>
       </header>
 
@@ -66,7 +77,7 @@ export const ProjectInfo: React.FC = () => {
             <h2 className="flex items-center gap-2 font-semibold text-blue-900 mb-4">
                 Thành viên nhóm
             </h2>
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-3 text-sm">
               {members.map((m) => (
                 <li key={m.mssv} className="border-b pb-3 last:border-0">
                   <p className="font-medium">{m.name}</p>
@@ -118,7 +129,7 @@ export const ProjectInfo: React.FC = () => {
             <div className="text-sm leading-7 text-justify space-y-4">
               <p>
                 Đồ án tập trung vào việc <strong>phân tích và trực quan hóa hành vi
-                rời bỏ khách hàng (Customer Churn)</strong> trong lĩnh vực thương mại điện tử.
+                rời bỏ của khách hàng (Customer Churn)</strong> trong lĩnh vực thương mại điện tử.
               </p>
 
               <p>
