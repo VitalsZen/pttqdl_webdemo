@@ -130,7 +130,7 @@ export const ChartConfig: React.FC<ChartConfigProps> = ({ columns, sampleData, o
       case 'radar':
         return (
           <div className="p-3 bg-blue-50 text-blue-800 rounded text-xs border border-blue-100">
-            <strong>Tự động:</strong> So sánh trung bình các chỉ số giữa nhóm Rời bỏ và Ở lại.
+            So sánh trung bình các chỉ số giữa nhóm Rời bỏ và Ở lại.
           </div>
         );
 
